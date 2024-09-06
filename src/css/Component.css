@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@media (max-width: 768px) {
+    .App > div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.select-component {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #111827;
+}
+
+.select-box-input {
+    flex: 1;
+    min-width: 100px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    padding-left: 8px;
+    color: #111827;
+}
+
+.select-box {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    width: 90%;
+    background-color: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.select-box:hover, .select-box.active {
+    border-color: #D6BBFB;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    box-shadow: 0px 0px 0px 4px rgba(158, 119, 237, 0.24);
+
+}
+.select-box-avatar:hover, .select-box.active {
+    border-color: #D6BBFB;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    box-shadow: 0px 0px 0px 4px rgba(158, 119, 237, 0.24);
+
+}
+
+.select-box .user-icon {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+.select-box .icon {
+    margin-right: 8px;
+    color: #6B7280;
+}
+.select-box-content-avatar {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.select-box-avatar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border: 1px solid #D6BBFB;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.select-option {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+.select-option .user-icon {
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.select-option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    overflow: hidden;
+}
+
+.select-box-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    gap: 5px;
+}
+
+.select-box-content-search-avatar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 5px;
+}
+
+.select-box-input {
+    flex: 1;
+    min-width: 100px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #111827;
+}
+.select-box:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(255, 255, 255, 0);
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    max-height: 240px;
+    overflow-y: auto;
+    margin-top: 4px;
+}
+
+.select-options.show {
+    display: block;
+}
+
+.select-option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    overflow: hidden;
+}
+
+.select-option:hover {
+    background-color: #F9FAFB;
+}
+
+.select-option.selected {
+    background-color: #F9FAFB;
+    font-weight: 600;
+}
+
+.select-option.disabled {
+    color: #9CA3AF;
+    cursor: not-allowed;
+}
+
+.select-option .icon {
+    margin-right: 8px;
+    color: #6B7280;
+}
+
+.select-option .check-icon {
+    margin-left: auto;
+    color: #6B7280;
+}
